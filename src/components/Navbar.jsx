@@ -11,8 +11,9 @@ const Navbar = () => {
     { name: "Features", href: "#features" },
     { name: "Why Gymfinity", href: "#why-gymfinity" },
     { name: "Pricing", href: "#pricing" },
+     { name: "Our Team", href: "#OurTeam" },
     { name: "Contact Us", href: "#contact" },
-    { name: "Our Team", href: "#OurTeam" },
+   
   ];
 
   useEffect(() => {
