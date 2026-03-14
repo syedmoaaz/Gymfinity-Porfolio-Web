@@ -9,9 +9,6 @@ const Contact = () => {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Content */}
                     <div>
-                        <span className="inline-block px-4 py-1.5 bg-gymfinity-400/10 text-gymfinity-400 text-sm font-semibold rounded-full mb-4">
-                            Contact Us
-                        </span>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gymfinity-900 tracking-tight mb-4">
                             Ready to transform{' '}
                             <span className="text-gymfinity-400">your gym?</span>
