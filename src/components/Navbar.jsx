@@ -130,7 +130,7 @@ const Navbar = () => {
         onClick={() => setMenuOpen(false)}
       />
 
-      {/* Mobile Slide Menu */}
+    
       <div
         className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-xl transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
