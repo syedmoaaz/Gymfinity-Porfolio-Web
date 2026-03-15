@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dashboard from "../assets/dashboard.png";
+import dashboard from "../Assets/dashboard.png";
 import { useState, useEffect } from "react";
 import { CheckCircle, Unlock, Banknote, Bell } from "lucide-react";
 
