@@ -264,9 +264,9 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import moaaz from "../Assets/moaaz.jpeg";
-import taimur from "../Assets/taimurc.jpeg";
-import saif from "../Assets/saifl.jpeg";
+import moaaz from "../assets/moaaz.jpeg";
+import taimur from "../assets/taimurc.jpeg";
+import saif from "../assets/saifl.jpeg";
 
 const teamMembers = [
   {

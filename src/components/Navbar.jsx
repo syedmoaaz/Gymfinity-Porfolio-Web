@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import logo from "../Assets/logo.png";
+import React, { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -190,3 +190,20 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
