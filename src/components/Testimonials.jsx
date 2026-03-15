@@ -15,7 +15,7 @@ const reviews = [
     city: "Karachi",
     role: "Owner",
     rating: 5,
-    image: "https://i.pravatar.cc/100?img=3",
+    image: "",
   },
   {
     title: "Love the Simplicity",
@@ -25,7 +25,17 @@ const reviews = [
     city: "Karachi",
     role: "Owner",
     rating: 5,
-    image: "https://i.pravatar.cc/100?img=3",
+    image: "",
+  },
+  {
+    title: "Excellent System",
+    review:
+      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
+    name: "Emaan Sheikh",
+    city: "Lahore",
+    role: "Owner",
+    rating: 5,
+    image: "",
   },
   {
     title: "Excellent System",
@@ -35,17 +45,7 @@ const reviews = [
     city: "Lahore",
     role: "Founder",
     rating: 5,
-    image: "https://i.pravatar.cc/100?img=5",
-  },
-  {
-    title: "Excellent System",
-    review:
-      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
-    name: "Usman Sheikh",
-    city: "Lahore",
-    role: "Founder",
-    rating: 5,
-    image: "https://i.pravatar.cc/100?img=5",
+    image: "",
   },
  
 ];
