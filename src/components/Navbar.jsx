@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/gymfinity-logo-new.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +59,7 @@ const Navbar = () => {
             {/* Logo */}
             <a href="#" className="flex items-center gap-3">
               <img
-                src={logo}
+                src="/gymfinity-logo-new.png"
                 alt="Gymfinity Logo"
                 className="h-9 lg:h-10 w-auto object-contain"
               />
