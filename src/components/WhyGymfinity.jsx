@@ -443,7 +443,8 @@ return ( <section
             playsInline
             className="w-full object-cover"
           >
-            <source src="/public/gymfinity-demo.mp4" type="video/mp4" />
+            {/* <source src="/public/gymfinity-demo.mp4" type="video/mp4" /> */}
+            <source src="/gymfinity-demo.mp4" type="video/mp4" />
           </video>
 
         </div>
