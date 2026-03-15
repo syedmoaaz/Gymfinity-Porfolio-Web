@@ -54,7 +54,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gymfinity-400/20 focus:border-gymfinity-400 transition-all"
-                                        placeholder="John"
+                                        placeholder="Zohaib"
                                     />
                                 </div>
                                 <div>
@@ -62,7 +62,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gymfinity-400/20 focus:border-gymfinity-400 transition-all"
-                                        placeholder="Doe"
+                                        placeholder="Ismail"
                                     />
                                 </div>
                             </div>
@@ -71,7 +71,7 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gymfinity-400/20 focus:border-gymfinity-400 transition-all"
-                                    placeholder="john@example.com"
+                                    placeholder="zohaib@example.com"
                                 />
                             </div>
                             <div>

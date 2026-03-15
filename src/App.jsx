@@ -38,6 +38,8 @@ import Footer from './components/Footer';
 import OurTeam from './components/OurTeam';
 import Testimonials from "./components/Testimonials";
 import PremiumFAQ from  "./components/PremiumFAQ";
+import WhatsAppFloating from "./components/WhatsAppFloating";
+
 
 function App() {
     return (
@@ -56,10 +58,10 @@ function App() {
                             <Pricing />
                              <Testimonials />
                              <OurTeam/>
-                             
                              <PremiumFAQ />
                              <Contact />
-                           
+                           <WhatsAppFloating/>
+
                         
                         </main>
                     } 
