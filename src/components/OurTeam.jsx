@@ -93,7 +93,7 @@ const OurTeam = () => {
           className="text-center mb-16 relative z-10"
         >
           <h1 className="text-3xl md:text-5xl font-bold text-white">
-            Meet The Team Behind{" "}
+            Meet The Experts Behind{" "}
             <span className="text-gymfinity-400">GymFinity</span>
           </h1>
 
@@ -103,7 +103,7 @@ const OurTeam = () => {
         </motion.div>
 
         {/* Cards */}
-      //  <motion.div
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
