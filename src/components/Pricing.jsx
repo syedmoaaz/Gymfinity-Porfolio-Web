@@ -232,7 +232,6 @@ const Pricing = () => {
                 </div>
 
 
-                {/* SAVE BADGE */}
                 {billing==="annual" && (
                   <div className="text-green-500 text-sm font-medium mb-5">
                      Save 50%
