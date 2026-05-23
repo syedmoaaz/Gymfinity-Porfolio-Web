@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import SteelGymLogo from "../Assets/SteelGymLogo.png";
 import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
-import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.png";
+import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
 
 import "swiper/css";
 import "swiper/css/pagination";
