@@ -5,6 +5,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import SteelGymLogo from "../Assets/SteelGymLogo.png";
 import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
 import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
+import ThriveFitnessLogo from "../Assets/ThriveFitnessLogo.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -49,7 +50,7 @@ const reviews = [
     city: "Thrive Fitness",
     role: "Owner",
     rating: 5,
-    image: "",
+    image: ThriveFitnessLogo,
   },
 
 
