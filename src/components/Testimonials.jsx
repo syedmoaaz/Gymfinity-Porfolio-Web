@@ -32,13 +32,24 @@ const reviews = [
     title: "Excellent System",
     review:
       "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
-    name: "Management Staff",
+    name: "Team DOHS",
     city: "DOHS Arena Gym",
-    role: "Founder",
+    role: "Staff",
     rating: 5,
     image: "",
   },
- 
+   {
+    title: "Excellent System",
+    review:
+      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
+    name: "Umer Zubair",
+    city: "Thrive Fitness",
+    role: "Owner",
+    rating: 5,
+    image: "",
+  },
+
+
 ];
 
 const Testimonials = () => {
