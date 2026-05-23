@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import SteelGymLogo from "../Assets/SteelGymLogo.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,7 +16,7 @@ const reviews = [
     city: "Chain Of Steel Gym",
     role: "Owner",
     rating: 5,
-    image: "",
+    image: SteelGymLogo,
   },
 
   {
