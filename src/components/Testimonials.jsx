@@ -3,7 +3,7 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import SteelGymLogo from "../Assets/SteelGymLogo.png";
-import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.jpeg";
+import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
