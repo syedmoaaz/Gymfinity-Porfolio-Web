@@ -11,18 +11,19 @@ const reviews = [
     title: "Love the Simplicity",
     review:
       "Gymfinity ne hamara poora management automate kar diya. Attendance aur fee tracking bohat easy ho gayi.",
-    name: "Ali Khan",
-    city: "Karachi",
+    name: "Shahzad Ahmed Qureshi",
+    city: "Chain Of Steel Gym",
     role: "Owner",
     rating: 5,
     image: "",
   },
+
   {
-    title: "Love the Simplicity",
+    title: "Excellent System",
     review:
-      "Gymfinity ne hamara poora management automate kar diya. Attendance aur fee tracking bohat easy ho gayi.",
-    name: "Ali Khan",
-    city: "Karachi",
+      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
+    name: "Abdullah Bin Israr",
+    city: "Forge Fitness",
     role: "Owner",
     rating: 5,
     image: "",
@@ -31,18 +32,8 @@ const reviews = [
     title: "Excellent System",
     review:
       "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
-    name: "Emaan Sheikh",
-    city: "Lahore",
-    role: "Owner",
-    rating: 5,
-    image: "",
-  },
-  {
-    title: "Excellent System",
-    review:
-      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
-    name: "Usman Sheikh",
-    city: "Lahore",
+    name: "Management Staff",
+    city: "DOHS Arena Gym",
     role: "Founder",
     rating: 5,
     image: "",
