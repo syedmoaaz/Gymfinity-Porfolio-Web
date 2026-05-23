@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import SteelGymLogo from "../Assets/SteelGymLogo.png";
 import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
+import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -38,7 +39,7 @@ const reviews = [
     city: "DOHS Arena Gym",
     role: "Staff",
     rating: 5,
-    image: "",
+    image: DohsArenaGymLogo,
   },
    {
     title: "Excellent System",
