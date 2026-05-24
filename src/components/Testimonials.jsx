@@ -14,7 +14,7 @@ const reviews = [
   {
     title: "Love the Simplicity",
     review:
-      "Gymfinity ne hamara poora management automate kar diya. Attendance aur fee tracking bohat easy ho gayi.",
+      "The support team is very responsive and always available whenever we need help or guidance regarding the software features.",
     name: "Shahzad Ahmed Qureshi",
     city: "Chain Of Steel Gym",
     role: "Owner",
