@@ -25,7 +25,7 @@ const reviews = [
   {
     title: "Excellent System",
     review:
-      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
+      "System is great and they also added all our old members’ data from registration forms into the system, which helped us a lot and made gym management much easier",
     name: "Abdullah Bin Israr",
     city: "Forge Fitness",
     role: "Owner",
