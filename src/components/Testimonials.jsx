@@ -35,7 +35,7 @@ const reviews = [
   {
     title: "Excellent System",
     review:
-      "We installed this software in our society gym, and the experience has been outstanding. GymFinity also customized the system according to our requirements in a very short time.",
+      "We installed GymFinity in our society gym, and the experience has been outstanding. They also customized the system according to our requirements in a very short time.",
     name: "Team DOHS",
     city: "DOHS Arena Gym",
     role: "Staff",
