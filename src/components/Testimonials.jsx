@@ -14,7 +14,7 @@ const reviews = [
   {
     title: "Love the Simplicity",
     review:
-      "The support team is very responsive and always available whenever we need help or guidance regarding the software features.",
+      "GymFinity Software is best for gyms and the support team is very responsive and always available whenever we need help or guidance regarding the software features.",
     name: "Shahzad Ahmed Qureshi",
     city: "Chain Of Steel Gym",
     role: "Owner",
@@ -25,7 +25,7 @@ const reviews = [
   {
     title: "Excellent System",
     review:
-      "System is great and they also added all our old members’ data from registration forms into the system, which helped us a lot and made gym management much easier",
+      "System is great and they also added all our old members’ data from registration forms into the system, which helped us a lot and made gym management much easier.",
     name: "Abdullah Bin Israr",
     city: "Forge Fitness",
     role: "Owner",
