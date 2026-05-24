@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 
 const reviews = [
   {
-    title: "Love the Simplicity",
+    title: "Amzing Support Team",
     review:
       "GymFinity Software is best for gyms and the support team is very responsive and always available whenever we need help or guidance regarding the software features.",
     name: "Shahzad Ahmed Qureshi",
@@ -23,7 +23,7 @@ const reviews = [
   },
 
   {
-    title: "Excellent System",
+    title: "Time Savers",
     review:
       "System is great and they also added all our old members data from registration forms into the system, which helped us a lot and made gym management much easier.",
     name: "Abdullah Bin Israr",
@@ -43,7 +43,7 @@ const reviews = [
     image: DohsArenaGymLogo,
   },
    {
-    title: "Excellent System",
+    title: "Very Efficient Software",
     review:
       "I have been using this software in my gym Thrive Fitness for a while now, and my experience has been excellent. The system is very efficient and user friendly.",
     name: "Umer Zubair",
