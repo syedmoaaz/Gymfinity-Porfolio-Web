@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 
 const reviews = [
   {
-    title: "Amzing Support Team",
+    title: "Amazing Support Team",
     review:
       "GymFinity Software is best for gyms and the support team is very responsive and always available whenever we need help or guidance regarding the software features.",
     name: "Shahzad Ahmed Qureshi",
