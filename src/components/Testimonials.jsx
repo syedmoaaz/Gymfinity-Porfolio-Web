@@ -25,7 +25,7 @@ const reviews = [
   {
     title: "Excellent System",
     review:
-      "System is great and they also added all our old members’ data from registration forms into the system, which helped us a lot and made gym management much easier.",
+      "System is great and they also added all our old members data from registration forms into the system, which helped us a lot and made gym management much easier.",
     name: "Abdullah Bin Israr",
     city: "Forge Fitness",
     role: "Owner",
@@ -35,7 +35,7 @@ const reviews = [
   {
     title: "Excellent System",
     review:
-      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
+      "We installed this software in our society gym, and the experience has been outstanding. GymFinity also customized the system according to our requirements in a very short time.",
     name: "Team DOHS",
     city: "DOHS Arena Gym",
     role: "Staff",
@@ -45,7 +45,7 @@ const reviews = [
    {
     title: "Excellent System",
     review:
-      "I have been using this software in my gym Thrive Fitness for a while now, and my experience has been excellent. The system is very efficient and user friendly",
+      "I have been using this software in my gym Thrive Fitness for a while now, and my experience has been excellent. The system is very efficient and user friendly.",
     name: "Umer Zubair",
     city: "Thrive Fitness",
     role: "Owner",
