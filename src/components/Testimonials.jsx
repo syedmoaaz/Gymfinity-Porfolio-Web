@@ -45,7 +45,7 @@ const reviews = [
    {
     title: "Excellent System",
     review:
-      "System clean aur simple hai. Members ka record maintain karna ab bohat easy ho gaya.",
+      "I have been using this software in my gym Thrive Fitness for a while now, and my experience has been excellent. The system is very efficient and user friendly",
     name: "Umer Zubair",
     city: "Thrive Fitness",
     role: "Owner",
