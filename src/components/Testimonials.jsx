@@ -6,6 +6,7 @@ import SteelGymLogo from "../Assets/SteelGymLogo.png";
 import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
 import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
 import ThriveFitnessLogo from "../Assets/ThriveFitnessLogo.png";
+import OnyxGymLogo from "../Assets/OnyxGymLogo.jpg";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -53,6 +54,16 @@ const reviews = [
     image: ThriveFitnessLogo,
   },
 
+   {
+    title: "Easy to Use and Manage",
+    review:
+      "GymFinity is very easy to use and manage . It has all the features that a gym needs to manage its operations efficiently.",
+    name: "Rayyan Amir",
+    city: "Onyx Gym and Fitness Studio",
+    role: "Owner",
+    rating: 5,
+    image: OnyxGymLogo,
+  },
 
 ];
 
