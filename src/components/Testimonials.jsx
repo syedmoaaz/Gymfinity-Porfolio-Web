@@ -57,7 +57,7 @@ const reviews = [
    {
     title: "Easy to Use and Manage",
     review:
-      "GymFinity is very easy to use and manage . It has all the features that a gym needs to manage its operations efficiently, really liked the POS feature",
+      "GymFinity is very easy to use and manage . It has all the features that a gym needs to manage its operations efficiently, really liked the POS feature. ",
     name: "Rayyan Amir",
     city: "Onyx Gym and Fitness Studio",
     role: "Owner",
