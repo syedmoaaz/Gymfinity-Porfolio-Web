@@ -363,12 +363,13 @@ const plans = [
   {
     tier: "Enterprise",
     brand: "GymFinity Elite",
-    monthly: "Custom",
+    monthly: 9999,
     description: "For large gyms and multiple branches.",
     features: [
       "Everything in GymFinity Pro",
       "Unlimited members",
       "Biometric attendance tracking",
+      "Customized E-Slips",
       "Trainer & staff management",
       "Multi-branch support",
       "Advanced analytics",
