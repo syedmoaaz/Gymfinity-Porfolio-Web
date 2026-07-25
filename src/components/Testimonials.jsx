@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import RowHausLogo from "../Assets/RowHaus Logo.webp";
 import SteelGymLogo from "../Assets/SteelGymLogo.png";
 import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
 import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
@@ -12,6 +13,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const reviews = [
+  {
+    title: "Incredible Partner",
+    review:
+      "Thank you Gymfinity, for being such an incredible partner. We absolutely love the software. It has made managing our gym so much easier. A special mention to Moaaz, who has been an absolute gentleman throughout. He's always available, responsive and genuinely committed to helping whenever we need him.",
+    name: "Meherdil Babai",
+    city: "RowHaus",
+    role: "Owner",
+    rating: 5,
+    image: RowHausLogo,
+  },
   {
     title: "Amazing Support Team",
     review:
@@ -138,7 +149,7 @@ const Testimonials = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-20 h-20 rounded-full mx-auto border-2 border-gymfinity-400 group-hover:border-white transition mb-3"
+                  className="w-20 h-20 rounded-full object-cover mx-auto border-2 border-gymfinity-400 group-hover:border-white transition mb-3"
                 />
 
                 {/* Name + Role + City */}
