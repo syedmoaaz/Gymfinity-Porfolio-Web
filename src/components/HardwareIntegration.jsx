@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Fingerprint, ScanFace, RefreshCw, Layers } from "lucide-react";
+import { Fingerprint, ScanFace, RefreshCw, ShieldCheck } from "lucide-react";
 
 import zktecoDevice from "../Assets/Zkteco_Device_Image-removebg-preview.png";
 import zktecoK40 from "../Assets/Zkteco_k40-removebg-preview.png";
@@ -10,6 +10,8 @@ import hikvisionBasic from "../Assets/Hikviison Basic.png";
 import hikvisionFaceRec from "../Assets/Hikviison_Face_Rec-removebg-preview.png";
 import hikvisionFaceFinger from "../Assets/Hikvision Face  and Finger .jpg";
 import hikvisionFaceSmall from "../Assets/Hikvision_Face_Small-removebg-preview.png";
+import zktecoLogo from "../Assets/zkteco_new_logo-removebg-preview.png";
+import hikvisionLogo from "../Assets/Hikvision_Logo-removebg-preview.png";
 
 const devices = [
   {
@@ -76,19 +78,19 @@ const capabilities = [
     description: "Support for common biometric modes used on gym floors.",
   },
   {
+    icon: <ShieldCheck size={22} />,
+    title: "Access Control",
+    description: "Control door entry with biometric verification so only active members get in.",
+  },
+  {
     icon: <RefreshCw size={22} />,
-    title: "Real-time Sync",
+    title: "Real Time Sync",
     description: "Attendance updates flow into your GymFinity dashboard automatically.",
   },
   {
     icon: <ScanFace size={22} />,
-    title: "No Manual Check-ins",
-    description: "Members clock in at the device — staff spend less time on registers.",
-  },
-  {
-    icon: <Layers size={22} />,
-    title: "Multi-device Ready",
-    description: "Run one or more terminals across branches with a unified system.",
+    title: "No Manual Check Ins",
+    description: "Members clock in at the device so staff spend less time on registers.",
   },
 ];
 
@@ -102,7 +104,7 @@ const HardwareIntegration = () => {
       <div className="absolute bottom-10 -right-24 w-96 h-96 bg-gymfinity-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
+        <div className="text-center max-w-5xl mx-auto mb-10 lg:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,11 +121,30 @@ const HardwareIntegration = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             viewport={{ once: true }}
-            className="mt-4 text-lg text-gray-500 leading-relaxed"
+            className="mt-4 text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto"
           >
-            Connect ZKTeco and Hikvision biometric devices to GymFinity for
-            automatic member attendance — no manual check-ins.
+            Connect Biometric Devices to GymFinity for automatic Member
+            Attendance and Access Controls with no manual check ins.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-10 sm:mt-12 flex items-center justify-center gap-10 sm:gap-14 lg:gap-20"
+          >
+            <img
+              src={hikvisionLogo}
+              alt="Hikvision"
+              className="h-10 sm:h-12 lg:h-14 w-auto object-contain shrink-0"
+            />
+            <img
+              src={zktecoLogo}
+              alt="ZKTeco"
+              className="h-16 sm:h-20 lg:h-24 w-auto object-contain shrink-0"
+            />
+          </motion.div>
         </div>
 
         <motion.div
