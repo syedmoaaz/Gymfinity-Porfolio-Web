@@ -1,22 +1,70 @@
 import { motion } from "framer-motion";
 import { Fingerprint, ScanFace, RefreshCw, Layers } from "lucide-react";
-import zktecoDevice from "../Assets/Zkteco Device Image.jpg";
-import hikvisionDevice from "../Assets/Hikvision Device Image.jpg";
 
-const brands = [
+import zktecoDevice from "../Assets/Zkteco Device Image.jpg";
+import zktecoK40 from "../Assets/Zkteco k40.jpg";
+import zktecoK50 from "../Assets/Zkteco K50.jpg";
+import zktecoSenseFace from "../Assets/Zkteco Sense Face.jpg";
+import hikvisionDevice from "../Assets/Hikvision Device Image.jpg";
+import hikvisionBasic from "../Assets/Hikviison Basic.png";
+import hikvisionFaceRec from "../Assets/Hikviison Face Rec.jpg";
+import hikvisionFaceFinger from "../Assets/Hikvision Face  and Finger .jpg";
+import hikvisionFaceSmall from "../Assets/Hikvision Face Small.jpg";
+
+const devices = [
   {
-    name: "ZKTeco",
-    description:
-      "Reliable fingerprint and face terminals trusted in gyms worldwide — check-ins sync straight into GymFinity.",
-    image: zktecoDevice,
-    alt: "ZKTeco biometric attendance device",
+    src: zktecoDevice,
+    alt: "ZKTeco biometric device",
+    className: "left-[4%] top-[8%] w-[4.75rem] sm:w-24 lg:w-28 -rotate-6",
+    delay: "0s",
   },
   {
-    name: "Hikvision",
-    description:
-      "Modern biometric access devices that capture attendance in real time and keep your member records accurate.",
-    image: hikvisionDevice,
-    alt: "Hikvision biometric attendance device",
+    src: hikvisionFaceRec,
+    alt: "Hikvision face recognition terminal",
+    className: "left-[22%] top-[2%] w-[4.25rem] sm:w-20 lg:w-24 rotate-3",
+    delay: "0.6s",
+  },
+  {
+    src: zktecoK40,
+    alt: "ZKTeco K40",
+    className: "left-[40%] top-[10%] w-20 sm:w-24 lg:w-[7.5rem] -rotate-2",
+    delay: "1.2s",
+  },
+  {
+    src: hikvisionBasic,
+    alt: "Hikvision basic terminal",
+    className: "left-[58%] top-[4%] w-[4.5rem] sm:w-20 lg:w-24 rotate-6",
+    delay: "0.3s",
+  },
+  {
+    src: zktecoK50,
+    alt: "ZKTeco K50",
+    className: "left-[76%] top-[12%] w-[4.75rem] sm:w-24 lg:w-28 -rotate-3",
+    delay: "1.5s",
+  },
+  {
+    src: hikvisionFaceFinger,
+    alt: "Hikvision face and fingerprint device",
+    className: "left-[10%] top-[48%] w-20 sm:w-24 lg:w-28 rotate-2",
+    delay: "0.9s",
+  },
+  {
+    src: zktecoSenseFace,
+    alt: "ZKTeco Sense Face",
+    className: "left-[32%] top-[52%] w-[4.5rem] sm:w-20 lg:w-24 -rotate-5",
+    delay: "1.8s",
+  },
+  {
+    src: hikvisionDevice,
+    alt: "Hikvision biometric device",
+    className: "left-[52%] top-[46%] w-20 sm:w-24 lg:w-[7.25rem] rotate-4",
+    delay: "0.4s",
+  },
+  {
+    src: hikvisionFaceSmall,
+    alt: "Hikvision face terminal",
+    className: "left-[72%] top-[50%] w-[4.25rem] sm:w-20 lg:w-24 -rotate-4",
+    delay: "1.1s",
   },
 ];
 
@@ -53,7 +101,7 @@ const HardwareIntegration = () => {
       <div className="absolute bottom-10 -right-24 w-96 h-96 bg-gymfinity-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,41 +125,38 @@ const HardwareIntegration = () => {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 mb-14 lg:mb-16">
-          {brands.map((brand, index) => (
-            <motion.div
-              key={brand.name}
-              initial={{ opacity: 0, x: index === 0 ? -40 : 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.55, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm p-6 sm:p-8 shadow-sm hover:shadow-xl hover:shadow-gymfinity-400/10 hover:border-gymfinity-400/25 transition-all duration-500"
-            >
-              <div className="mb-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-gymfinity-400 mb-2">
-                  Compatible with
-                </p>
-                <h3 className="text-2xl font-extrabold text-gymfinity-900">
-                  {brand.name}
-                </h3>
-                <p className="mt-3 text-gray-500 text-sm sm:text-base leading-relaxed max-w-md">
-                  {brand.description}
-                </p>
-              </div>
+        {/* Floating device field */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="relative mx-auto mb-14 lg:mb-16 h-[340px] sm:h-[380px] lg:h-[420px] max-w-5xl"
+          aria-label="Supported ZKTeco and Hikvision biometric devices"
+        >
+          <div className="absolute inset-6 sm:inset-8 rounded-full bg-gymfinity-400/5 blur-3xl pointer-events-none" />
 
-              <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 min-h-[260px] sm:min-h-[300px] overflow-hidden">
-                <div className="absolute inset-0 bg-gymfinity-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <motion.img
-                  src={brand.image}
-                  alt={brand.alt}
-                  className="relative z-10 max-h-[240px] sm:max-h-[280px] w-auto object-contain drop-shadow-md animate-float"
-                  whileHover={{ scale: 1.04 }}
-                  transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                />
-              </div>
+          {devices.map((device) => (
+            <motion.div
+              key={device.alt + device.className}
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.45 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.08, zIndex: 20 }}
+              className={`absolute z-10 rounded-2xl bg-white border border-gray-100 shadow-md shadow-gray-200/60 p-2 sm:p-2.5 ${device.className}`}
+              style={{ animationDelay: device.delay }}
+            >
+              <img
+                src={device.src}
+                alt={device.alt}
+                className="w-full h-auto object-contain animate-float"
+                style={{ animationDelay: device.delay }}
+                draggable={false}
+              />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {capabilities.map((item, index) => (
