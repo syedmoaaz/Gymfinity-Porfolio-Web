@@ -1,69 +1,70 @@
 import { motion } from "framer-motion";
 import { Fingerprint, ScanFace, RefreshCw, Layers } from "lucide-react";
 
-import zktecoDevice from "../Assets/Zkteco Device Image.jpg";
-import zktecoK40 from "../Assets/Zkteco k40.jpg";
-import zktecoK50 from "../Assets/Zkteco K50.jpg";
-import zktecoSenseFace from "../Assets/Zkteco Sense Face.jpg";
-import hikvisionDevice from "../Assets/Hikvision Device Image.jpg";
+import zktecoDevice from "../Assets/Zkteco_Device_Image-removebg-preview.png";
+import zktecoK40 from "../Assets/Zkteco_k40-removebg-preview.png";
+import zktecoK50 from "../Assets/Zkteco_K50-removebg-preview.png";
+import zktecoSenseFace from "../Assets/Zkteco_Sense_Face-removebg-preview.png";
+import hikvisionDevice from "../Assets/Hikvision_Device_Image-removebg-preview.png";
 import hikvisionBasic from "../Assets/Hikviison Basic.png";
-import hikvisionFaceRec from "../Assets/Hikviison Face Rec.jpg";
+import hikvisionFaceRec from "../Assets/Hikviison_Face_Rec-removebg-preview.png";
 import hikvisionFaceFinger from "../Assets/Hikvision Face  and Finger .jpg";
-import hikvisionFaceSmall from "../Assets/Hikvision Face Small.jpg";
+import hikvisionFaceSmall from "../Assets/Hikvision_Face_Small-removebg-preview.png";
 
 const devices = [
   {
     src: zktecoDevice,
     alt: "ZKTeco biometric device",
-    className: "left-[4%] top-[8%] w-[4.75rem] sm:w-24 lg:w-28 -rotate-6",
+    className: "left-[2%] top-[4%] w-28 sm:w-36 lg:w-44 -rotate-6",
     delay: "0s",
   },
   {
     src: hikvisionFaceRec,
     alt: "Hikvision face recognition terminal",
-    className: "left-[22%] top-[2%] w-[4.25rem] sm:w-20 lg:w-24 rotate-3",
+    className: "left-[20%] top-[0%] w-24 sm:w-32 lg:w-40 rotate-3",
     delay: "0.6s",
   },
   {
     src: zktecoK40,
     alt: "ZKTeco K40",
-    className: "left-[40%] top-[10%] w-20 sm:w-24 lg:w-[7.5rem] -rotate-2",
+    className: "left-[38%] top-[6%] w-28 sm:w-36 lg:w-44 -rotate-2",
     delay: "1.2s",
   },
   {
     src: hikvisionBasic,
     alt: "Hikvision basic terminal",
-    className: "left-[58%] top-[4%] w-[4.5rem] sm:w-20 lg:w-24 rotate-6",
+    className: "left-[56%] top-[2%] w-24 sm:w-32 lg:w-40 rotate-6",
     delay: "0.3s",
   },
   {
     src: zktecoK50,
     alt: "ZKTeco K50",
-    className: "left-[76%] top-[12%] w-[4.75rem] sm:w-24 lg:w-28 -rotate-3",
+    className: "left-[74%] top-[8%] w-28 sm:w-36 lg:w-44 -rotate-3",
     delay: "1.5s",
   },
   {
     src: hikvisionFaceFinger,
     alt: "Hikvision face and fingerprint device",
-    className: "left-[10%] top-[48%] w-20 sm:w-24 lg:w-28 rotate-2",
+    className: "left-[8%] top-[46%] w-28 sm:w-36 lg:w-44 rotate-2",
     delay: "0.9s",
+    blendWhite: true,
   },
   {
     src: zktecoSenseFace,
     alt: "ZKTeco Sense Face",
-    className: "left-[32%] top-[52%] w-[4.5rem] sm:w-20 lg:w-24 -rotate-5",
+    className: "left-[30%] top-[50%] w-24 sm:w-32 lg:w-40 -rotate-5",
     delay: "1.8s",
   },
   {
     src: hikvisionDevice,
     alt: "Hikvision biometric device",
-    className: "left-[52%] top-[46%] w-20 sm:w-24 lg:w-[7.25rem] rotate-4",
+    className: "left-[50%] top-[44%] w-28 sm:w-36 lg:w-44 rotate-4",
     delay: "0.4s",
   },
   {
     src: hikvisionFaceSmall,
     alt: "Hikvision face terminal",
-    className: "left-[72%] top-[50%] w-[4.25rem] sm:w-20 lg:w-24 -rotate-4",
+    className: "left-[70%] top-[48%] w-24 sm:w-32 lg:w-40 -rotate-4",
     delay: "1.1s",
   },
 ];
@@ -125,13 +126,12 @@ const HardwareIntegration = () => {
           </motion.p>
         </div>
 
-        {/* Floating device field */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="relative mx-auto mb-14 lg:mb-16 h-[340px] sm:h-[380px] lg:h-[420px] max-w-5xl"
+          className="relative mx-auto mb-14 lg:mb-16 h-[400px] sm:h-[460px] lg:h-[520px] max-w-6xl"
           aria-label="Supported ZKTeco and Hikvision biometric devices"
         >
           <div className="absolute inset-6 sm:inset-8 rounded-full bg-gymfinity-400/5 blur-3xl pointer-events-none" />
@@ -144,13 +144,14 @@ const HardwareIntegration = () => {
               transition={{ duration: 0.45 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.08, zIndex: 20 }}
-              className={`absolute z-10 rounded-2xl bg-white border border-gray-100 shadow-md shadow-gray-200/60 p-2 sm:p-2.5 ${device.className}`}
-              style={{ animationDelay: device.delay }}
+              className={`absolute z-10 ${device.className}`}
             >
               <img
                 src={device.src}
                 alt={device.alt}
-                className="w-full h-auto object-contain animate-float"
+                className={`w-full h-auto object-contain animate-float drop-shadow-[0_12px_24px_rgba(23,37,42,0.18)] ${
+                  device.blendWhite ? "mix-blend-multiply" : ""
+                }`}
                 style={{ animationDelay: device.delay }}
                 draggable={false}
               />
