@@ -54,7 +54,7 @@ const Footer = () => {
             </span>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mt-4 mb-6">
-              The all-in-one gym management platform trusted by fitness businesses worldwide.
+              The all-in-one gym management platform trusted by fitness businesses nationwide.
             </p>
 
             {/* Social Icons */}
