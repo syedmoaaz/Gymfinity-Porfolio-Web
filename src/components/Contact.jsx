@@ -11,6 +11,12 @@ const initialForm = {
 const inputClassName =
   "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gymfinity-400/20 focus:border-gymfinity-400 transition-all";
 
+// Web3Forms keys are used in the browser (same as their HTML embed).
+// Env is preferred; fallback keeps production working when host env wasn't set at build time.
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+  "ba536348-17b9-49d1-b1cd-efc7abfebb2d";
+
 const Contact = () => {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
@@ -25,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     setErrorMessage("");
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    const accessKey = WEB3FORMS_ACCESS_KEY;
     if (!accessKey) {
       setStatus("error");
       setErrorMessage("Form is not configured. Missing access key.");
