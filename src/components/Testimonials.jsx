@@ -76,7 +76,7 @@ const ReviewCard = ({ item, onReadMore }) => {
   const isLong = item.review.length > PREVIEW_LIMIT;
 
   return (
-    <div className="relative overflow-hidden rounded-lg bg-white shadow-md group p-8 flex flex-col w-[min(100%,22.5rem)] shrink-0 h-full">
+    <div className="relative overflow-hidden rounded-lg bg-white shadow-md group p-8 flex flex-col w-[22.5rem] shrink-0 h-full mr-[30px]">
       <div className="absolute -top-20 -left-20 w-56 h-56 bg-gymfinity-400 rounded-full scale-0 group-hover:scale-[6] transition-transform duration-500 ease-out" />
 
       <div className="relative z-10 transition-colors duration-300 flex flex-col h-full">
@@ -130,7 +130,6 @@ const ReviewCard = ({ item, onReadMore }) => {
 
 const Testimonials = () => {
   const [activeReview, setActiveReview] = useState(null);
-  const loopReviews = [...reviews, ...reviews];
 
   useEffect(() => {
     if (!activeReview) return;
@@ -148,6 +147,15 @@ const Testimonials = () => {
     };
   }, [activeReview]);
 
+  const renderTrack = (keyPrefix) =>
+    reviews.map((item, index) => (
+      <ReviewCard
+        key={`${keyPrefix}-${item.name}-${index}`}
+        item={item}
+        onReadMore={setActiveReview}
+      />
+    ));
+
   return (
     <section className="py-24 px-6 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center mb-16">
@@ -161,17 +169,14 @@ const Testimonials = () => {
 
       <div className="max-w-6xl mx-auto overflow-hidden group/marquee">
         <div
-          className={`flex gap-[30px] w-max animate-marquee group-hover/marquee:[animation-play-state:paused] ${
+          className={`flex w-max animate-marquee group-hover/marquee:[animation-play-state:paused] ${
             activeReview ? "[animation-play-state:paused]" : ""
           }`}
         >
-          {loopReviews.map((item, index) => (
-            <ReviewCard
-              key={`${item.name}-${index}`}
-              item={item}
-              onReadMore={setActiveReview}
-            />
-          ))}
+          <div className="flex">{renderTrack("a")}</div>
+          <div className="flex" aria-hidden="true">
+            {renderTrack("b")}
+          </div>
         </div>
       </div>
 
