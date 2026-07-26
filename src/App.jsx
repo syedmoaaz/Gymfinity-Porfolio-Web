@@ -13,6 +13,7 @@ import OurTeam from './components/OurTeam';
 import Testimonials from "./components/Testimonials";
 import PremiumFAQ from  "./components/PremiumFAQ";
 import WhatsAppFloating from "./components/WhatsAppFloating";
+import ChatBotFloating from "./components/ChatBotFloating";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                              <PremiumFAQ />
                              <Contact />
                            <WhatsAppFloating/>
+                           <ChatBotFloating />
 
                         
                         </main>
