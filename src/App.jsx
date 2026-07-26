@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import WhyGymfinity from './components/WhyGymfinity';
 import HardwareIntegration from './components/HardwareIntegration';
+import HardwareHelp from './components/HardwareHelp';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -29,6 +30,7 @@ function App() {
                             <Features />
                             <WhyGymfinity />
                             <HardwareIntegration />
+                            <HardwareHelp />
                             <Pricing />
                              <Testimonials />
                              <OurTeam/>
