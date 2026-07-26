@@ -72,12 +72,26 @@ const reviews = [
   },
 ];
 
-const ReviewCard = ({ item, onReadMore }) => {
+const ReviewCard = ({ item, onReadMore, onHoldStart }) => {
   const isLong = item.review.length > PREVIEW_LIMIT;
 
+  const handlePointerDown = (e) => {
+    if (e.pointerType === "touch" || e.pointerType === "pen") {
+      onHoldStart();
+      return;
+    }
+    if (e.button === 2) {
+      onHoldStart();
+    }
+  };
+
   return (
-    <div className="relative overflow-hidden rounded-lg bg-white shadow-md group p-8 flex flex-col w-[22.5rem] shrink-0 h-full mr-[30px]">
-      <div className="absolute -top-20 -left-20 w-56 h-56 bg-gymfinity-400 rounded-full scale-0 group-hover:scale-[6] transition-transform duration-500 ease-out" />
+    <div
+      className="relative overflow-hidden rounded-lg bg-white shadow-md group p-8 flex flex-col w-[22.5rem] shrink-0 h-full mr-[30px] select-none"
+      onPointerDown={handlePointerDown}
+      onContextMenu={(e) => e.preventDefault()}
+    >
+      <div className="absolute -top-20 -left-20 w-56 h-56 bg-gymfinity-400 rounded-full scale-0 group-hover:scale-[6] transition-transform duration-500 ease-out pointer-events-none" />
 
       <div className="relative z-10 transition-colors duration-300 flex flex-col h-full">
         <div className="text-4xl text-white mb-4">
@@ -113,6 +127,7 @@ const ReviewCard = ({ item, onReadMore }) => {
             src={item.image}
             alt={item.name}
             className="w-20 h-20 rounded-full object-cover mx-auto border-2 border-gymfinity-400 group-hover:border-white transition mb-3"
+            draggable={false}
           />
 
           <h5 className="text-lg font-semibold text-gymfinity-400 group-hover:text-white transition">
@@ -130,6 +145,7 @@ const ReviewCard = ({ item, onReadMore }) => {
 
 const Testimonials = () => {
   const [activeReview, setActiveReview] = useState(null);
+  const [holdPaused, setHoldPaused] = useState(false);
 
   useEffect(() => {
     if (!activeReview) return;
@@ -147,18 +163,36 @@ const Testimonials = () => {
     };
   }, [activeReview]);
 
+  useEffect(() => {
+    if (!holdPaused) return;
+
+    const endHold = () => setHoldPaused(false);
+    window.addEventListener("pointerup", endHold);
+    window.addEventListener("pointercancel", endHold);
+    window.addEventListener("blur", endHold);
+
+    return () => {
+      window.removeEventListener("pointerup", endHold);
+      window.removeEventListener("pointercancel", endHold);
+      window.removeEventListener("blur", endHold);
+    };
+  }, [holdPaused]);
+
+  const isPaused = holdPaused || Boolean(activeReview);
+
   const renderTrack = (keyPrefix) =>
     reviews.map((item, index) => (
       <ReviewCard
         key={`${keyPrefix}-${item.name}-${index}`}
         item={item}
         onReadMore={setActiveReview}
+        onHoldStart={() => setHoldPaused(true)}
       />
     ));
 
   return (
-    <section className="py-24 px-6 bg-gray-100">
-      <div className="max-w-6xl mx-auto text-center mb-16">
+    <section className="py-24 bg-gray-100 overflow-x-hidden">
+      <div className="max-w-6xl mx-auto text-center mb-16 px-6">
         <h3 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
           The Impact of <br />
           <span className="text-gymfinity-400">
@@ -167,10 +201,10 @@ const Testimonials = () => {
         </h3>
       </div>
 
-      <div className="max-w-6xl mx-auto overflow-hidden group/marquee">
+      <div className="w-full overflow-hidden">
         <div
-          className={`flex w-max animate-marquee group-hover/marquee:[animation-play-state:paused] ${
-            activeReview ? "[animation-play-state:paused]" : ""
+          className={`flex w-max animate-marquee ${
+            isPaused ? "[animation-play-state:paused]" : ""
           }`}
         >
           <div className="flex">{renderTrack("a")}</div>
