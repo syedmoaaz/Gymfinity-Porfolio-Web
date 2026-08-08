@@ -14,7 +14,7 @@ const reviews = [
   {
     title: "Smooth and Powerful",
     review:
-      "I was using another gym software before, and it was very frustrating — no proper attendance tracking, poor performance, and no mobile access. After switching to GymFinity, managing my gym became so much easier. There's no missing attendance anymore, and the software is smooth and powerful.",
+      "I was using another gym software before, and it was very frustrating no proper attendance tracking, poor performance. After switching to GymFinity, managing my gym became so much easier. There's no missing attendance anymore, and the software is smooth and powerful.",
     name: "Imran Baig",
     city: "Orien Fitness",
     role: "Owner",
