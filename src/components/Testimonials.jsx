@@ -6,7 +6,7 @@ import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
 import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
 import ThriveFitnessLogo from "../Assets/ThriveFitnessLogo.png";
 import OnyxGymLogo from "../Assets/OnyxGymLogo.jpg";
-import OrienFitnessLogo from "../Assets/OrienFitnessLogo.jpg";
+import OrienFitnessLogo from "../Assets/OrienFitnessLogo.jpeg";
 
 const PREVIEW_LIMIT = 200;
 
