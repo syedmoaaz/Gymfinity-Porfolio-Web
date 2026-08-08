@@ -6,10 +6,21 @@ import ForgeFitnessLogo from "../Assets/ForgeFitnessLogo.png";
 import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
 import ThriveFitnessLogo from "../Assets/ThriveFitnessLogo.png";
 import OnyxGymLogo from "../Assets/OnyxGymLogo.jpg";
+import OrienFitnessLogo from "../Assets/OrienFitnessLogo.jpg";
 
 const PREVIEW_LIMIT = 200;
 
 const reviews = [
+  {
+    title: "Smooth and Powerful",
+    review:
+      "I was using another gym software before, and it was very frustrating — no proper attendance tracking, poor performance, and no mobile access. After switching to GymFinity, managing my gym became so much easier. There's no missing attendance anymore, and the software is smooth and powerful.",
+    name: "Imran Baig",
+    city: "Orien Fitness",
+    role: "Owner",
+    rating: 5,
+    image: OrienFitnessLogo,
+  },
   {
     title: "Incredible Partner",
     review:
