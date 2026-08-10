@@ -288,7 +288,7 @@ const CustomSoftware = () => {
             </p>
             <p className="mt-3 text-sm sm:text-base text-gray-500 leading-relaxed max-w-xl">
               We design gym management software around how your gym actually
-              runs — your workflows, your brand, and the features your staff
+              runs your workflows, your brand, and the features your staff
               need every day.
             </p>
 
