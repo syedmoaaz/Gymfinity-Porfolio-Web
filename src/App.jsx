@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import WhyGymfinity from './components/WhyGymfinity';
+import CustomSoftware from './components/CustomSoftware';
 import HardwareIntegration from './components/HardwareIntegration';
 import HardwareHelp from './components/HardwareHelp';
 import Pricing from './components/Pricing';
@@ -30,6 +31,7 @@ function App() {
                             <Hero />
                             <Features />
                             <WhyGymfinity />
+                            <CustomSoftware />
                             <HardwareIntegration />
                             <HardwareHelp />
                             <Pricing />
