@@ -247,6 +247,7 @@ const CustomSoftware = () => {
     <section
       id="custom-software"
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-gymfinity-50/80 to-white"
+      style={{ zoom: 0.9 }}
     >
       <div
         className="absolute top-0 left-0 w-48 h-48 opacity-[0.35] pointer-events-none"
