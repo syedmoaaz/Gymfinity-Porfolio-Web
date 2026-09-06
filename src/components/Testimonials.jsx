@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import RowHausLogo from "../Assets/RowHaus Logo.webp";
 import SteelGymLogo from "../Assets/SteelGymLogo.png";
@@ -9,7 +9,7 @@ import OnyxGymLogo from "../Assets/OnyxGymLogo.jpg";
 import OrienFitnessLogo from "../Assets/OrienFitnessLogo.jpeg";
 import VibraniumFitnessLogo from "../Assets/VibraniumFitnessLogo.jpg";
 
-const PREVIEW_LIMIT = 200;
+const PREVIEW_LIMIT = 150;
 
 const reviews = [
   {
@@ -95,7 +95,25 @@ const reviews = [
 ];
 
 const ReviewCard = ({ item, onReadMore, onHoldStart }) => {
-  const isLong = item.review.length > PREVIEW_LIMIT;
+  const textRef = useRef(null);
+  const [isLong, setIsLong] = useState(item.review.length > PREVIEW_LIMIT);
+
+  useEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+
+    const checkOverflow = () => {
+      setIsLong(
+        item.review.length > PREVIEW_LIMIT ||
+          el.scrollHeight > el.clientHeight + 1
+      );
+    };
+
+    checkOverflow();
+    const observer = new ResizeObserver(checkOverflow);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [item.review]);
 
   const handlePointerDown = (e) => {
     if (e.pointerType === "touch" || e.pointerType === "pen") {
@@ -128,7 +146,10 @@ const ReviewCard = ({ item, onReadMore, onHoldStart }) => {
           {item.title}
         </h4>
 
-        <p className="text-gray-500 group-hover:text-gray-200 transition text-sm leading-relaxed line-clamp-4 min-h-[5.5rem]">
+        <p
+          ref={textRef}
+          className="text-gray-500 group-hover:text-gray-200 transition text-sm leading-relaxed line-clamp-4 min-h-[5.5rem]"
+        >
           {item.review}
         </p>
 
