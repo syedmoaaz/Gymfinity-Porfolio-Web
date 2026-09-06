@@ -7,10 +7,21 @@ import DohsArenaGymLogo from "../Assets/DohsArenaGymLogo.jpeg";
 import ThriveFitnessLogo from "../Assets/ThriveFitnessLogo.png";
 import OnyxGymLogo from "../Assets/OnyxGymLogo.jpg";
 import OrienFitnessLogo from "../Assets/OrienFitnessLogo.jpeg";
+import VibraniumFitnessLogo from "../Assets/VibraniumFitnessLogo.jpg";
 
 const PREVIEW_LIMIT = 200;
 
 const reviews = [
+  {
+    title: "Completely Up to the Mark",
+    review:
+      "The management software is the best for everything from finance to admin, and it is completely up to the mark. The service and response time are also fantastic, and Moaaz is a great guy!",
+    name: "Nawaz Khan",
+    city: "Vibranium Fitness",
+    role: "Owner",
+    rating: 5,
+    image: VibraniumFitnessLogo,
+  },
   {
     title: "Smooth and Powerful",
     review:
