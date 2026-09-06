@@ -16,13 +16,13 @@ const teamMembers = [
       "Full Stack MERN Developer",
       "Backend Architecture & SaaS Systems",
     ],
-    bio: `Syed Moaaz Kamal is the Founder and CEO of Gymfinity, a modern gym management software designed to simplify and automate gym operations.
+    bio: `Syed Moaaz Kamal is the Founder and CEO of GymFinity, a modern gym management software designed to simplify and automate gym operations.
 
 Currently pursuing a Bachelor's degree in Software Engineering, he has built over 50+ MERN stack projects including SaaS-based solutions.
 
-At Gymfinity he focuses on backend architecture, scalable SaaS systems, and platform reliability.
+At GymFinity he focuses on backend architecture, scalable SaaS systems, and platform reliability.
 
-Being a fitness enthusiast himself, he created Gymfinity with the vision to automate gyms across Pakistan through affordable technology.`,
+Being a fitness enthusiast himself, he created GymFinity with the vision to automate gyms across Pakistan through affordable technology.`,
   },
   {
     name: "Muhammad Taimur",
@@ -38,11 +38,11 @@ Being a fitness enthusiast himself, he created Gymfinity with the vision to auto
       "Business Operations",
       "Product Strategy",
     ],
-    bio: `Muhammad Taimur is the Co-Founder of Gymfinity and contributes to both frontend development and business operations. Currently pursuing a Bachelor's degree in Software Engineering,
+    bio: `Muhammad Taimur is the Co-Founder of GymFinity and contributes to both frontend development and business operations. Currently pursuing a Bachelor's degree in Software Engineering,
 
-He focuses on building intuitive user interfaces that make Gymfinity easy for gym owners to use.
+He focuses on building intuitive user interfaces that make GymFinity easy for gym owners to use.
 
-Alongside product development, he works on business strategy and client relations helping Gymfinity grow across gyms in Pakistan.`,
+Alongside product development, he works on business strategy and client relations helping GymFinity grow across gyms in Pakistan.`,
   },
 
   // TEMPORARILY DISABLED

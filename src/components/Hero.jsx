@@ -162,7 +162,7 @@ const Hero = () => {
 
                 <img
                   src={dashboard}
-                  alt="Gymfinity Dashboard"
+                  alt="GymFinity Dashboard"
                   className="w-full object-cover"
                 />
 

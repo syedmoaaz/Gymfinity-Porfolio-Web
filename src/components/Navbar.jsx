@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Features", href: "#features" },
-    { name: "Why Gymfinity", href: "#why-gymfinity" },
+    { name: "Why GymFinity", href: "#why-gymfinity" },
     { name: "Pricing", href: "#pricing" },
      { name: "Our Team", href: "#OurTeam" },
     { name: "Contact Us", href: "#contact" },
@@ -60,7 +60,7 @@ const Navbar = () => {
             <a href="#" className="flex items-center gap-3">
               <img
                 src="/gymfinity-logo-new.png"
-                alt="Gymfinity Logo"
+                alt="GymFinity Logo"
                 className="h-9 lg:h-10 w-auto object-contain"
               />
 

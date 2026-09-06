@@ -32,13 +32,13 @@
 //     icon: <GraduationCap size={24} />,
 //     title: "Free Of Cost Staff Training",
 //     description:
-//       "We provide complete training for gym staff so they can easily operate Gymfinity without technical knowledge.",
+//       "We provide complete training for gym staff so they can easily operate GymFinity without technical knowledge.",
 //   },
 //   {
 //     icon: <Sparkles size={24} />,
 //     title: "Monthly Feature Updates",
 //     description:
-//       "Gymfinity continuously improves with new features and updates released every month.",
+//       "GymFinity continuously improves with new features and updates released every month.",
 //   },
 //   {
 //     icon: <MapPin size={24} />,
@@ -83,7 +83,7 @@
 //             viewport={{ once: true }}
 //             className="mt-4 text-lg text-gray-500 leading-relaxed"
 //           >
-//             Gymfinity is designed specifically for gyms in Pakistan, helping gym
+//             GymFinity is designed specifically for gyms in Pakistan, helping gym
 //             owners manage members, fees, attendance, trainers, and reports
 //             from one powerful dashboard.
 //           </motion.p>
@@ -170,7 +170,7 @@
 
 //               <img
 //                 src={dashboard}
-//                 alt="Gymfinity Dashboard"
+//                 alt="GymFinity Dashboard"
 //                 className="w-full object-cover"
 //               />
 
@@ -300,13 +300,13 @@ description:
 icon: <GraduationCap size={24} />,
 title: "Free Of Cost Staff Training",
 description:
-"We provide complete training for gym staff so they can easily operate Gymfinity without technical knowledge.",
+"We provide complete training for gym staff so they can easily operate GymFinity without technical knowledge.",
 },
 {
 icon: <Sparkles size={24} />,
 title: "Monthly Feature Updates",
 description:
-"Gymfinity continuously improves with new features and updates released every month.",
+"GymFinity continuously improves with new features and updates released every month.",
 },
 {
 icon: <MapPin size={24} />,
@@ -350,7 +350,7 @@ return ( <section
         viewport={{ once: true }}
         className="mt-4 text-lg text-gray-500 leading-relaxed"
       >
-        Gymfinity is designed specifically for gyms in Pakistan, helping gym
+        GymFinity is designed specifically for gyms in Pakistan, helping gym
         owners manage members, fees, attendance, trainers, and reports
         from one powerful dashboard.
       </motion.p>

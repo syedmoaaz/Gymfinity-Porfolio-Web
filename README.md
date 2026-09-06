@@ -1,6 +1,6 @@
 GymFinity Portfolio Website
 
-This is the official portfolio website built for my startup Gymfinity — a modern SaaS-based gym management system.
+This is the official portfolio website built for my startup GymFinity — a modern SaaS-based gym management system.
 
 The purpose of this project is to showcase the product, its features, and the overall vision in a clean, interactive, and visually appealing way.
 
@@ -37,7 +37,7 @@ Built with scalability in mind
 
 This portfolio website is built to:
 
-Represent the Gymfinity startup
+Represent the GymFinity startup
 Showcase product features and value
 Attract potential gym clients
 Serve as a demo + marketing landing page

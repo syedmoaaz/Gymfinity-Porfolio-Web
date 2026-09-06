@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Bot, X, Send } from "lucide-react";
 
 const whatsappUrl = `https://wa.me/923131234420?text=${encodeURIComponent(
-  "Hello, I want to know more about Gymfinity software."
+  "Hello, I want to know more about GymFinity software."
 )}`;
 
 const knowledge = [

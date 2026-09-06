@@ -52,7 +52,7 @@
 //           </h2>
 
 //           <p className="text-gray-600 text-lg leading-relaxed">
-//             Everything you need to know about Gymfinity. From member management
+//             Everything you need to know about GymFinity. From member management
 //             to revenue tracking and attendance automation — we’ve got you covered.
 //           </p>
 //         </div>
@@ -193,7 +193,7 @@ const PremiumFAQ = () => {
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Everything you need to know about Gymfinity. From member management
+            Everything you need to know about GymFinity. From member management
             to revenue tracking and attendance automation we’ve got you covered.
           </p>
 

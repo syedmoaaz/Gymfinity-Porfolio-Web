@@ -51,7 +51,7 @@ const features = [
   {
     title: "Automated & Manual Attendance",
     description:
-      "Track attendance automatically or manually. Whether you use machines or not, Gymfinity has you covered.",
+      "Track attendance automatically or manually. Whether you use machines or not, GymFinity has you covered.",
     icon: <CalendarCheck size={28} />,
   },
   {
@@ -63,7 +63,7 @@ const features = [
   {
     title: "Cloud & Multi-Device Access",
     description:
-      "Access Gymfinity anywhere from desktop, tablet, or mobile with our secure cloud-based platform.",
+      "Access GymFinity anywhere from desktop, tablet, or mobile with our secure cloud-based platform.",
     icon: <Cloud size={28} />,
   },
 ];
