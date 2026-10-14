@@ -44,6 +44,7 @@ const reviews = [
     role: "Owner",
     rating: 5,
     image: ShahJeeLogo,
+    imageClassName: "object-contain bg-[#1a1a1a]",
   },
   {
     title: "Completely Up to the Mark",
@@ -199,12 +200,14 @@ const ReviewCard = ({ item, onReadMore, onHoldStart }) => {
         )}
 
         <div className="mt-auto">
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-20 h-20 rounded-full object-cover mx-auto border-2 border-gymfinity-400 group-hover:border-white transition mb-3"
-            draggable={false}
-          />
+          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto border-2 border-gymfinity-400 group-hover:border-white transition mb-3">
+            <img
+              src={item.image}
+              alt={item.name}
+              className={`w-full h-full ${item.imageClassName || "object-cover"}`}
+              draggable={false}
+            />
+          </div>
 
           <h5 className="text-lg font-semibold text-gymfinity-400 group-hover:text-white transition">
             {item.name}
@@ -328,11 +331,13 @@ const Testimonials = () => {
             </p>
 
             <div className="flex items-center gap-4">
-              <img
-                src={activeReview.image}
-                alt={activeReview.name}
-                className="w-14 h-14 rounded-full object-cover border-2 border-gymfinity-400"
-              />
+              <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gymfinity-400 shrink-0">
+                <img
+                  src={activeReview.image}
+                  alt={activeReview.name}
+                  className={`w-full h-full ${activeReview.imageClassName || "object-cover"}`}
+                />
+              </div>
               <div>
                 <p className="font-semibold text-gymfinity-400">
                   {activeReview.name}
