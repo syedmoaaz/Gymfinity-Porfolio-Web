@@ -8,10 +8,43 @@ import ThriveFitnessLogo from "../Assets/ThriveFitnessLogo.png";
 import OnyxGymLogo from "../Assets/OnyxGymLogo.jpg";
 import OrienFitnessLogo from "../Assets/OrienFitnessLogo.jpeg";
 import VibraniumFitnessLogo from "../Assets/VibraniumFitnessLogo.jpg";
+import BodyMatrixLogo from "../Assets/Bodymatrixlogo.jpeg";
+import AuraXFitnessLogo from "../Assets/Auraxfitnesslogo.png";
+import ShahJeeLogo from "../Assets/Shahjeelogo.jpeg";
 
 const PREVIEW_LIMIT = 150;
 
 const reviews = [
+  {
+    title: "Easier From Day One",
+    review:
+      "We recently opened our gym and chose GymFinity to manage our daily operations. Having memberships, fee records, and attendance in one place has made things much easier from day one.",
+    name: "Abdul Ghuffran",
+    city: "Body Matrix",
+    role: "Owner",
+    rating: 5,
+    image: BodyMatrixLogo,
+  },
+  {
+    title: "Smooth Gym Management",
+    review:
+      "GymFinity has made managing Aura X Fitness much simpler. Memberships, payments, and attendance stay organized in one place, so our team can focus more on members and less on paperwork.",
+    name: "Anas Raza",
+    city: "Aura X Fitness",
+    role: "Owner",
+    rating: 5,
+    image: AuraXFitnessLogo,
+  },
+  {
+    title: "Reliable and Easy to Use",
+    review:
+      "GymFinity is a reliable system for Shah Jee Pro Fitness. It helps us track members, fees, and attendance smoothly, and the overall experience has been easy for our staff to use every day.",
+    name: "Sohail Khan",
+    city: "Shah Jee Pro Fitness",
+    role: "Owner",
+    rating: 5,
+    image: ShahJeeLogo,
+  },
   {
     title: "Completely Up to the Mark",
     review:
