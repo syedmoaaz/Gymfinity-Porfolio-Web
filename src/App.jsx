@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ImpactStats from './components/ImpactStats';
 import Features from './components/Features';
 import WhyGymfinity from './components/WhyGymfinity';
 import CustomSoftware from './components/CustomSoftware';
@@ -29,6 +30,7 @@ function App() {
                     element={
                         <main>
                             <Hero />
+                            <ImpactStats />
                             <Features />
                             <WhyGymfinity />
                             <CustomSoftware />
