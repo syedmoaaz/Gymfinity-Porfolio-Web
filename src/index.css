@@ -46,7 +46,6 @@ html.dark .bg-white\/15 {
 }
 
 html.dark .bg-gray-50 {
-  /* Match hero gradient end (#0f1419) so no seam under the landing fold */
   background-color: #0f1419 !important;
 }
 
@@ -108,7 +107,13 @@ html.dark .via-gymfinity-100\/30,
 html.dark .via-gymfinity-100\/40,
 html.dark .via-gymfinity-50\/80 {
   --tw-gradient-to: rgb(15 20 25 / 0) var(--tw-gradient-to-position) !important;
-  --tw-gradient-stops: var(--tw-gradient-from), #1a2a2e var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+  /* Keep via close to page bg so hero does not leave a teal band / hard seam */
+  --tw-gradient-stops: var(--tw-gradient-from), #121820 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+html.dark .via-gray-50 {
+  --tw-gradient-to: rgb(15 20 25 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #0f1419 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
 }
 
 /* Keep brand / white text on teal buttons and dark footers */

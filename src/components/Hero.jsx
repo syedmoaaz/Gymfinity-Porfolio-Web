@@ -58,11 +58,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-20 bg-gradient-to-br from-white via-gymfinity-100/30 to-gray-50 overflow-hidden">
+    <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-20 bg-gradient-to-b from-white via-gymfinity-100/30 to-gray-50 overflow-hidden">
 
       {/* background blur */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-gymfinity-400/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-gymfinity-400/5 rounded-full blur-3xl"></div>
+
+      {/* Soft blend into the section below */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-gray-50" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 

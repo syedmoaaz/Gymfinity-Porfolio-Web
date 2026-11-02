@@ -100,10 +100,13 @@ const ImpactStats = () => {
     <section
       ref={sectionRef}
       id="impact"
-      className="relative py-14 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 via-gray-50 to-white overflow-hidden"
       aria-label="GymFinity impact across Pakistan"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      {/* Soft blend from hero into this band */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-gray-50 to-transparent" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
