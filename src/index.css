@@ -16,7 +16,131 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+/* Portfolio dark mode — class-based overrides (matches app approach) */
+html.dark {
+  color-scheme: dark;
+  color: #e5e7eb;
+}
+
+html.dark body {
+  background-color: #0f1419;
+  color: #e5e7eb;
+}
+
+html.dark .bg-white {
+  background-color: #1a2332 !important;
+}
+
+html.dark .bg-white\/95 {
+  background-color: rgba(26, 35, 50, 0.95) !important;
+}
+
+html.dark .bg-white\/80 {
+  background-color: rgba(26, 35, 50, 0.8) !important;
+}
+
+html.dark .bg-white\/15 {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #121a24 !important;
+}
+
+html.dark .bg-gray-100 {
+  background-color: #243044 !important;
+}
+
+html.dark .bg-gymfinity-50,
+html.dark .bg-gymfinity-100 {
+  background-color: #1a2a2e !important;
+}
+
+html.dark .hover\:bg-gray-100:hover,
+html.dark .hover\:bg-gymfinity-50:hover {
+  background-color: #243044 !important;
+}
+
+html.dark .text-gymfinity-900,
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700 {
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+html.dark .border-gray-100,
+html.dark .border-gray-200 {
+  border-color: #334155 !important;
+}
+
+html.dark .from-white {
+  --tw-gradient-from: #0f1419 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(15 20 25 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.dark .to-white,
+html.dark .to-gray-50 {
+  --tw-gradient-to: #0f1419 var(--tw-gradient-to-position) !important;
+}
+
+html.dark .from-gymfinity-100\/40,
+html.dark .from-gymfinity-50,
+html.dark .to-gymfinity-50 {
+  --tw-gradient-from: #152028 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(21 32 40 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.dark .via-gymfinity-100\/30,
+html.dark .via-gymfinity-100\/40,
+html.dark .via-gymfinity-50\/80 {
+  --tw-gradient-to: rgb(15 20 25 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #1a2a2e var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+/* Keep brand / white text on teal buttons and dark footers */
+html.dark .bg-gymfinity-400 .text-white,
+html.dark .text-white {
+  color: #ffffff !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #0f1419 !important;
+  color: #f3f4f6 !important;
+  border-color: #334155 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.dark ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0f1419;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 8px;
 }
 
 @layer utilities {

@@ -19,7 +19,7 @@ import ChatBotFloating from "./components/ChatBotFloating";
 
 function App() {
     return (
-        <div className="min-h-screen bg-white font-sans antialiased">
+        <div className="min-h-screen bg-white dark:bg-[#0f1419] font-sans antialiased transition-colors duration-300">
             <Navbar />
 
             <Routes>

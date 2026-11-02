@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const { dark, toggleDark } = useTheme();
 
   const navLinks = [
     { name: "Features", href: "#features" },
     { name: "Why GymFinity", href: "#why-gymfinity" },
     { name: "Pricing", href: "#pricing" },
-     { name: "Our Team", href: "#OurTeam" },
+    { name: "Our Team", href: "#OurTeam" },
     { name: "Contact Us", href: "#contact" },
-   
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-
-      // background blur
       setScrolled(window.scrollY > 20);
 
-      // hide/show navbar based on scroll direction
       if (window.scrollY > lastScrollY && window.scrollY > 120) {
-        setHideNav(true); // scrolling down
+        setHideNav(true);
       } else {
-        setHideNav(false); // scrolling up
+        setHideNav(false);
       }
 
       setLastScrollY(window.scrollY);
@@ -37,13 +36,24 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const handleNavClick = () => {
-    setHideNav(true); // hide navbar after click
+    setHideNav(true);
     setMenuOpen(false);
   };
 
+  const ThemeToggle = ({ className = "" }) => (
+    <button
+      type="button"
+      onClick={toggleDark}
+      className={`p-2 rounded-md text-gymfinity-900 hover:bg-gray-100 hover:text-gymfinity-400 transition duration-300 ${className}`}
+      title={dark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+    >
+      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+    </button>
+  );
+
   return (
     <>
-      {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform ${
           hideNav ? "-translate-y-full" : "translate-y-0"
@@ -55,8 +65,6 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-16">
-
-            {/* Logo */}
             <a href="#" className="flex items-center gap-3">
               <img
                 src="/gymfinity-logo-new.png"
@@ -69,7 +77,6 @@ const Navbar = () => {
               </span>
             </a>
 
-            {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <a
@@ -85,8 +92,8 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Login Button */}
-            <div className="hidden md:flex">
+            <div className="hidden md:flex items-center gap-2">
+              <ThemeToggle />
               <a
                 href="https://app.thegymfinity.com/login"
                 target="_blank"
@@ -97,31 +104,32 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Hamburger */}
-            <button
-              className="md:hidden p-2 rounded-md hover:bg-gray-100 transition"
-              onClick={() => setMenuOpen(true)}
-            >
-              <svg
-                className="w-6 h-6 text-gymfinity-900"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div className="md:hidden flex items-center gap-1">
+              <ThemeToggle />
+              <button
+                className="p-2 rounded-md hover:bg-gray-100 transition"
+                onClick={() => setMenuOpen(true)}
+                aria-label="Open menu"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-
+                <svg
+                  className="w-6 h-6 text-gymfinity-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Overlay */}
       <div
         className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -129,19 +137,17 @@ const Navbar = () => {
         onClick={() => setMenuOpen(false)}
       />
 
-    
       <div
         className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-xl transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-6 flex items-center justify-between border-b">
-
+        <div className="p-6 flex items-center justify-between border-b border-gray-200">
           <span className="text-xl font-bold text-gymfinity-400">
             GymFinity
           </span>
 
-          <button onClick={() => setMenuOpen(false)}>
+          <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
             <svg
               className="w-6 h-6 text-gray-700"
               fill="none"
@@ -156,12 +162,9 @@ const Navbar = () => {
               />
             </svg>
           </button>
-
         </div>
 
-        {/* Mobile Links */}
         <div className="flex flex-col gap-6 p-6">
-
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -181,7 +184,6 @@ const Navbar = () => {
           >
             Log In
           </a>
-
         </div>
       </div>
     </>
@@ -189,20 +191,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
