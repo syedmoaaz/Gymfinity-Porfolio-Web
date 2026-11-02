@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
@@ -6,7 +6,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hideNav, setHideNav] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const lastScrollY = useRef(0);
   const { dark, toggleDark } = useTheme();
 
   const navLinks = [
@@ -19,21 +20,30 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const y = window.scrollY;
+      setScrolled(y > 20);
 
-      if (window.scrollY > lastScrollY && window.scrollY > 120) {
+      if (y > lastScrollY.current && y > 120) {
         setHideNav(true);
       } else {
         setHideNav(false);
       }
+      lastScrollY.current = y;
 
-      setLastScrollY(window.scrollY);
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(docHeight > 0 ? (y / docHeight) * 100 : 0);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   const handleNavClick = () => {
     setHideNav(true);
@@ -127,6 +137,21 @@ const Navbar = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Scroll progress bar */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-[3px] bg-transparent pointer-events-none"
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(scrollProgress)}
+          aria-label="Page scroll progress"
+        >
+          <div
+            className="h-full bg-gymfinity-400 shadow-[0_0_8px_rgba(58,175,169,0.45)] transition-[width] duration-150 ease-out"
+            style={{ width: `${scrollProgress}%` }}
+          />
         </div>
       </nav>
 
