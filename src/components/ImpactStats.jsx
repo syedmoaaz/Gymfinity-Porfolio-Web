@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
@@ -33,32 +33,45 @@ const stats = [
   },
 ];
 
-function useCountUp(end, active, duration = 1400) {
-  const [value, setValue] = useState(0);
+function CountUpNumber({ end, active, duration = 1600 }) {
+  const ref = useRef(null);
+  const started = useRef(false);
 
   useEffect(() => {
-    if (!active) return;
+    if (!active || started.current) return;
+    started.current = true;
 
-    let frameId;
+    const el = ref.current;
+    if (!el) return;
+
+    let frameId = 0;
     const start = performance.now();
 
     const tick = (now) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(Math.round(end * eased));
-      if (progress < 1) frameId = requestAnimationFrame(tick);
+      const t = Math.min((now - start) / duration, 1);
+      // Smooth ease-out quart — fewer perceived jumps near the end
+      const eased = 1 - Math.pow(1 - t, 4);
+      el.textContent = String(Math.round(end * eased));
+      if (t < 1) {
+        frameId = requestAnimationFrame(tick);
+      } else {
+        el.textContent = String(end);
+      }
     };
 
+    el.textContent = "0";
     frameId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frameId);
   }, [active, end, duration]);
 
-  return value;
+  return (
+    <span ref={ref} className="text-gymfinity-900">
+      0
+    </span>
+  );
 }
 
 function StatValue({ stat, active }) {
-  const counted = useCountUp(stat.end ?? 0, active && stat.count);
-
   if (!stat.count) {
     return (
       <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gymfinity-400 tracking-tight">
@@ -69,7 +82,7 @@ function StatValue({ stat, active }) {
 
   return (
     <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight tabular-nums">
-      <span className="text-gymfinity-900">{counted}</span>
+      <CountUpNumber end={stat.end} active={active} />
       {stat.suffix ? (
         <span className={stat.suffixClassName || "text-gymfinity-400"}>
           {stat.suffix}
@@ -81,7 +94,7 @@ function StatValue({ stat, active }) {
 
 const ImpactStats = () => {
   const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { once: true, amount: 0.35 });
+  const inView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   return (
     <section
@@ -90,9 +103,6 @@ const ImpactStats = () => {
       className="relative py-14 sm:py-16 lg:py-20 bg-gradient-to-b from-white via-gymfinity-50/40 to-white overflow-hidden"
       aria-label="GymFinity impact across Pakistan"
     >
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gymfinity-400/40 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gymfinity-400/30 to-transparent" />
-
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -101,15 +111,12 @@ const ImpactStats = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
         >
-          <p className="text-sm font-semibold tracking-wide uppercase text-gymfinity-400 mb-3">
-            Built for Pakistan’s fitness industry
-          </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gymfinity-900 tracking-tight">
             Powering gyms across Pakistan
           </h2>
           <p className="mt-4 text-gray-500 text-base sm:text-lg leading-relaxed">
-            From single-branch studios to growing fitness brands — GymFinity
-            keeps memberships, fees, and attendance running smoothly every day.
+            Made for fitness businesses that care about accuracy, speed, and a
+            better member experience.
           </p>
         </motion.div>
 
@@ -119,7 +126,7 @@ const ImpactStats = () => {
               key={stat.id}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: index * 0.12 }}
+              transition={{ duration: 0.45, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="text-center rounded-2xl bg-white border border-gray-100 px-4 py-6 sm:py-8 shadow-sm"
             >
