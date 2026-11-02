@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const THEME_KEY = "gymfinity-portfolio-theme";
+const THEME_KEY = "gymfinity-portfolio-theme-v2";
 const ThemeContext = createContext(null);
 
 function applyThemeClass(dark) {
@@ -9,11 +9,12 @@ function applyThemeClass(dark) {
 
 export function ThemeProvider({ children }) {
   const [dark, setDark] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return (
-      localStorage.getItem(THEME_KEY) === "dark" ||
-      document.documentElement.classList.contains("dark")
-    );
+    if (typeof window === "undefined") return true;
+    const saved = localStorage.getItem(THEME_KEY);
+    // Default dark for first-time visitors; respect explicit light choice
+    if (saved === "light") return false;
+    if (saved === "dark") return true;
+    return true;
   });
 
   useEffect(() => {

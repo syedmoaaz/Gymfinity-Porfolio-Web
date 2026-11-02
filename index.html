@@ -57,10 +57,13 @@
     <script>
       (function () {
         try {
-          if (localStorage.getItem("gymfinity-portfolio-theme") === "dark") {
+          // Default dark unless user explicitly chose light
+          if (localStorage.getItem("gymfinity-portfolio-theme-v2") !== "light") {
             document.documentElement.classList.add("dark");
           }
-        } catch (e) {}
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
       })();
     </script>
     <div id="root"></div>
