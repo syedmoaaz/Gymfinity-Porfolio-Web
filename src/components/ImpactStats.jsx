@@ -131,8 +131,7 @@ const ImpactStats = () => {
               className="text-center rounded-2xl bg-white border border-gray-100 px-4 py-6 sm:py-8 shadow-sm"
             >
               <StatValue stat={stat} active={inView} />
-              <div className="mx-auto mt-3 mb-3 h-[3px] w-10 rounded-full bg-gymfinity-400" />
-              <p className="text-sm text-gray-500 leading-snug">{stat.label}</p>
+              <p className="mt-3 text-sm text-gray-500 leading-snug">{stat.label}</p>
             </motion.div>
           ))}
         </div>
