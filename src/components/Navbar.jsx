@@ -69,8 +69,8 @@ const Navbar = () => {
           hideNav ? "-translate-y-full" : "translate-y-0"
         } ${
           scrolled
-            ? "bg-white/95 backdrop-blur-lg shadow-sm border-b border-gray-200"
-            : "bg-white/80 backdrop-blur-md"
+            ? "bg-white/95 backdrop-blur-lg shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">

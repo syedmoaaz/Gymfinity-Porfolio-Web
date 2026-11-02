@@ -72,7 +72,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="pt-6 pb-20 lg:pt-16 lg:pb-24 bg-white"
+      className="pt-6 pb-20 lg:pt-16 lg:pb-24 bg-white dark:bg-[#0f1419]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 

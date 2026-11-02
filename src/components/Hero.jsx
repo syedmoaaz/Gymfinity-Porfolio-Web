@@ -58,7 +58,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-28 lg:pt-32 pb-20 bg-gradient-to-br from-white via-gymfinity-100/30 to-gray-50 overflow-hidden">
+    <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-20 bg-gradient-to-br from-white via-gymfinity-100/30 to-gray-50 overflow-hidden">
 
       {/* background blur */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-gymfinity-400/5 rounded-full blur-3xl"></div>

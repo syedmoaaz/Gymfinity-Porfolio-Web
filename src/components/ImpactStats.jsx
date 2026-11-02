@@ -100,7 +100,7 @@ const ImpactStats = () => {
     <section
       ref={sectionRef}
       id="impact"
-      className="relative py-14 sm:py-16 lg:py-20 bg-gradient-to-b from-white via-gymfinity-50/40 to-white overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden"
       aria-label="GymFinity impact across Pakistan"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">

@@ -46,7 +46,8 @@ html.dark .bg-white\/15 {
 }
 
 html.dark .bg-gray-50 {
-  background-color: #121a24 !important;
+  /* Match hero gradient end (#0f1419) so no seam under the landing fold */
+  background-color: #0f1419 !important;
 }
 
 html.dark .bg-gray-100 {
