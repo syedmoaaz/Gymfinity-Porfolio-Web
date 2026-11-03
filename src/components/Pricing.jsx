@@ -349,7 +349,7 @@ const plans = [
       "Everything in GymFinity",
       "Unlimited members",
       "Membership plans",
-      "Biometric attendance tracking",
+      "Door Access Control",
       "Trainer & staff management",
       "Payment tracking",
       "Advanced financial reports",
