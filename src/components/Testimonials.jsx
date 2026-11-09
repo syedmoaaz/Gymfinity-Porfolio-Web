@@ -11,10 +11,34 @@ import VibraniumFitnessLogo from "../Assets/VibraniumFitnessLogo.jpg";
 import BodyMatrixLogo from "../Assets/Bodymatrixlogo.jpeg";
 import AuraXFitnessLogo from "../Assets/Auraxfitnesslogo.png";
 import ShahJeeLogo from "../Assets/Shahjeelogo.jpeg";
+import MJFitnessLogo from "../Assets/MJ Fitness Gym Logo.jpg";
+import ArmStrongLogo from "../Assets/ArmStrong Gym Logo.jpg";
 
 const PREVIEW_LIMIT = 150;
 
 const reviews = [
+  {
+    title: "Biometric Made Easy",
+    review:
+      "One of the best and easiest gym management software solutions I've used. I previously tried two other software platforms, but neither could integrate properly with my biometric machine. GymFinity made the entire process incredibly easy, and everything started working perfectly on the first try. The software is user friendly, efficient, and makes gym management much easier. Highly recommended!",
+    name: "Muhammad Jahangir",
+    city: "MJ Fitness",
+    role: "Owner",
+    rating: 5,
+    image: MJFitnessLogo,
+    imageClassName: "object-contain bg-black",
+  },
+  {
+    title: "Easy for Daily Management",
+    review:
+      "I've installed GymFinity at my gym, and I'm really impressed with how easy to use it is. It makes daily gym management so much easier. I'm definitely planning to install it at my other branches too, inshAllah.",
+    name: "Muhammad",
+    city: "ArmStrong Gym and Fitness",
+    role: "Owner",
+    rating: 5,
+    image: ArmStrongLogo,
+    imageClassName: "object-contain bg-black",
+  },
   {
     title: "Easier From Day One",
     review:
